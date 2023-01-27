@@ -10,6 +10,7 @@ import { ApprendreComponent } from './components/apprendre/apprendre.component';
 import { QuizzComponent } from './components/quizz/quizz.component';
 import { QuestionComponent } from './components/question/question.component';
 import { ChatComponent } from './components/chat/chat.component';
+import { RecompenseComponent } from './components/recompense/recompense.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ChatComponent } from './components/chat/chat.component';
     ApprendreComponent,
     QuizzComponent,
     QuestionComponent,
-    ChatComponent
+    ChatComponent,
+    RecompenseComponent
   ],
   imports: [
     CommonModule,
