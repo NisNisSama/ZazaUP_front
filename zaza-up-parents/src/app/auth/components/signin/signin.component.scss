@@ -1,0 +1,89 @@
+.logIn {
+    z-index: 1000;
+
+    .logoFormulaire {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        // animation: fancy_animation 7s ease-in-out infinite;
+        img {
+            animation: fancy_animation 7s ease-in-out infinite;
+            // animation: animationLogo 3s linear infinite;
+        }
+
+        figure {
+            figcaption {
+                color: #ffffff;
+                filter: drop-shadow(3px 3px 3px #017794c5);
+            }
+        }
+    }
+
+    .formulaire {
+        background-color: #ffffffde;
+        border-radius: 19px;
+
+        .text_formulaire {
+            div {
+                filter: drop-shadow(3px 3px 3px #e9e5e5ea);
+                color: #0093b7;
+            }
+        }
+
+        form {
+            .input {
+                #identifiant, #password {
+                    border-radius: 31px 13px;
+                    border: none;
+                    box-shadow: 0px 2px 3px 1px #72727217;
+                }
+    
+                label {
+                    color: #0092b7e3;
+                    opacity: .8;
+                    filter: drop-shadow(3px 3px 3px #dfdbdbea);
+                }
+            }
+    
+            .checkbox {
+                label {
+                    color: #a9a7a7f2;
+                    font-size: .83rem;
+                }
+            }
+            
+            .btnlogIn {
+                position: relative;
+                button {
+                    border: none;
+                    color: #fff;
+                    letter-spacing: .7px;
+                    filter: drop-shadow(3px 3px 3px #c4c0c0ea);
+                    background-image: linear-gradient(to right top, #dbe82e, #4dd76f, #00b9a4, #0093b7, #0a6a9d);
+                }
+
+                .loader_spinner {
+                    position: absolute;
+                    background: #ffffff79;
+                    width: 111.47px;
+                    height: 36.39px;
+                    color: #0093b7;
+                }
+            }
+
+            .btnlogIn, .forgot_password, .inscrire {
+                button {
+                    font-size: .85rem;
+                }
+            }
+            
+            .forgot_password, .inscrire {
+                button {
+                    color: #0093b7;
+                }
+            }
+
+            div.text_error_handling {
+                color: #ec0404f1;
+            }
+        }
+    }
+}
