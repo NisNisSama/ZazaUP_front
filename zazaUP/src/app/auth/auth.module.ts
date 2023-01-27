@@ -23,12 +23,7 @@ import { AuthService } from './services/auth.service';
     NgOptimizedImage
   ],
   providers: [
-    AuthService,
-    /* PromotionsResolver,
-    FilieresResolver,
-    DomaineCompetencesResolver,
-    RegionsResolver,
-    StatusProfessionnelsResolver */
+    AuthService
   ]
 })
 export class AuthModule { }

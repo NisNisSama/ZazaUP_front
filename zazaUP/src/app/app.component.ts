@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'etudiants';
+  title = '';
   colorSvg: string[] = ['#4285f4', '#ea4335', '#fbbc05', '#34a853'];
 
   ngOnInit(): void {

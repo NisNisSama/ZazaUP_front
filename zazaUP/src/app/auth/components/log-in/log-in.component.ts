@@ -34,7 +34,7 @@ export class LogInComponent implements OnInit {
     this.loading = false;
 
     this.logInForm = this.formBuilder.group({
-      identifiant: [null, Validators.required],
+      username: [null, Validators.required],
       password: [null, Validators.required]
     });
   }
@@ -46,13 +46,18 @@ export class LogInComponent implements OnInit {
 
   onSubmit(): void {
     this.loading = true;
-    this.router.navigateByUrl('/bienvenue');
-    /* const donnees: AuthModel = this.logInForm.value as AuthModel;
+    const donnees: AuthModel = this.logInForm.value as AuthModel;
     this.authService.logIn(donnees).subscribe({
       next: response => {
-        this.sessionService.setToken(response.body.access_token);
-        this.router.navigateByUrl('/etudiants');
-        this.loading = false;
+        if(response.role === "CHILD") {
+          this.sessionService.setToken(response.access, response.id);
+          this.router.navigateByUrl('/bienvenue');
+          this.loading = false;
+        } else {
+          this.responseErreur = `Identifiant et/ou mot de passe invalides!`;
+          this.loading = false;
+          this.unauthorized = true;
+        }
       },
       error: response => {
         this.loading = false;
@@ -64,6 +69,6 @@ export class LogInComponent implements OnInit {
         else
           this.responseErreur = `Une erreur s'est produit...\n${response.error.message}: ${response.status}`;
       }
-    }); */
+    });
   }
 }

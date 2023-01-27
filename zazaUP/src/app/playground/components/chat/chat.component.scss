@@ -17,27 +17,52 @@
 }
 
 .envoyer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    input{
-        height: 40px;
-        width: 80%;
-        margin-top: 10px;
-        padding-left: 5px;
-        font-size: 20px;
-    }
-    button{
-        background-color: #0093b7;
-        border: none;
-        height: 40px;
-        width: 20%;
+    button {
+        font-family: inherit;
+        background: royalblue;
         color: white;
-        margin-top: 10px;
-
-        &:hover{
-            background-color: #06aad3;
-            font-size: larger;
-        }
+        display: flex;
+        border: none;
+        overflow: hidden;
+        transition: all 0.2s;
+    }
+    
+    button span {
+        display: block;
+        margin-left: 0.3em;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    button svg {
+        display: block;
+        transform-origin: center center;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    button:hover .svg-wrapper {
+        animation: fly-1 0.6s ease-in-out infinite alternate;
+    }
+    
+    button:hover svg {
+        transform: translateX(1.2em) rotate(45deg) scale(1.1);
+    }
+    
+    button:hover span {
+        transform: translateX(5em);
+    }
+    
+    button:active {
+        transform: scale(0.95);
     }
 }
+  
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+  

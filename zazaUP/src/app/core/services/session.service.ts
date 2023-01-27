@@ -9,12 +9,13 @@ export class SessionService {
         private router: Router
     ) {}
 
-    setToken(token: string): void {
-        localStorage.setItem('etudiant$esame', token);
+    setToken(token: string, token_id: number): void {
+        localStorage.setItem('zazaup_enfants', token);
+        localStorage.setItem('zazaup_enfants_id', token_id.toString());
     }
 
     getToken(): string | null {
-        return localStorage.getItem('etudiant$esame');
+        return localStorage.getItem('zazaup_enfants');
     }
 
     isLoggedIn(): boolean {
@@ -22,7 +23,7 @@ export class SessionService {
     }
 
     logOut(): void {
-        localStorage.removeItem('etudiant$esame');
+        localStorage.removeItem('zazaup_enfants');
         this.router.navigateByUrl('/auth');
     }
 }

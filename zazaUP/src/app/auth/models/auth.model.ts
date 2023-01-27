@@ -1,5 +1,5 @@
 export class AuthModel {
-    identifiant!: string;
+    username!: string;
     password!: string;
 }
 

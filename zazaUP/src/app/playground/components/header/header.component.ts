@@ -7,16 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  // infoZaza!: 
   timeLeft: number = 7200;
   interval: any;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    
     this.startTimer();
-
+    this.
   }
 
   startTimer() {
@@ -28,5 +27,7 @@ export class HeaderComponent implements OnInit {
       }
     },1000)
   }
+
+
 
 }

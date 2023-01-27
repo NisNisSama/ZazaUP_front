@@ -3,9 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  apiUrl: 'https://zazaup.iteam-s.mg/api/v1',
-  apiopenai: 'https://api.openai.com/v1'
+  production: false
 };
 
 /*
