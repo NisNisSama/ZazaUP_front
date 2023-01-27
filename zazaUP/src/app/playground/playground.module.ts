@@ -12,6 +12,7 @@ import { QuestionComponent } from './components/question/question.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { QuestionService } from './services/question.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RecompenseComponent } from './components/recompense/recompense.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ApprendreComponent,
     QuizzComponent,
     QuestionComponent,
-    ChatComponent
+    ChatComponent,
+    RecompenseComponent
   ],
   imports: [
     CommonModule,

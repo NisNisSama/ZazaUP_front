@@ -1,0 +1,50 @@
+.title-block{
+    display: inline-block;
+    min-width: 50vw;
+    margin: auto;
+    margin-left: 2vw;
+    height: fit-content;
+}
+
+.Animes{
+    width: 75vw;
+    margin: auto;
+    margin-bottom: 10vh;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.Anime{
+    width: 90%;
+    height: 30vh;
+    border-bottom: grey solid 2px;
+    margin-bottom: 5px;
+    padding: 3px;
+    border-radius: 8px;
+
+    button{
+        border: none;
+        background-color: #0093b7;
+        padding: 3px;
+        width: 80px;
+        height: 40px;
+        color:white;
+
+        &:hover{
+            background-color: #046983;
+        }
+    }
+}
+
+.Locked{
+    background-color: rgb(255, 0, 0);
+
+    button{
+        background-color: grey;
+
+        &:hover{
+            background-color: grey;
+            cursor: not-allowed;
+        }
+    }
+}
