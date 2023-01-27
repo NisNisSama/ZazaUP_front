@@ -9,8 +9,8 @@ export class HeaderService {
         private http: HttpClient
     ) {}
     
-    private getId(): number {
-        return +!localStorage.getItem('zazaup_enfants_id');
+    private getId(): string | null {                
+        return localStorage.getItem('zazaup_enfants_id');
     }
 
     private getToken(): string | null {

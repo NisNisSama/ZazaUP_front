@@ -14,6 +14,7 @@ import { QuestionService } from './services/question.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RecompenseComponent } from './components/recompense/recompense.component';
 import { DecouverteService } from './services/decouverte.service';
+import { HeaderService } from './services/header.service';
 
 
 @NgModule({
@@ -33,6 +34,6 @@ import { DecouverteService } from './services/decouverte.service';
     PlaygroundRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [QuestionService, DecouverteService]
+  providers: [QuestionService, DecouverteService, HeaderService]
 })
 export class PlaygroundModule { }

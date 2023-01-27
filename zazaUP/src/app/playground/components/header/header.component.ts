@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderService } from '../../services/header.service';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  // infoZaza!: 
+  username!: string;
   timeLeft: number = 7200;
   interval: any;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router, 
+    private headerService: HeaderService) { }
 
   ngOnInit(): void {
     this.startTimer();
-    this.
+    this.headerService.requestInfo().subscribe({
+      next: res => this.username = res.username
+    });
   }
 
   startTimer() {
