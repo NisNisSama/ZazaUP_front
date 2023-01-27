@@ -9,7 +9,7 @@
             <span *ngIf="!loading">TROUVER UNE REPONSE</span>
             <div *ngIf="loading" class="spinner-border loading" role="status"></div>
         </button>
-        <p class="text-center fs-6 opacity-75 my-3">"Inserer une citation"</p>
+        <p class="text-center fs-6 opacity-75 my-3">"{{quote}}" - <i>{{author}}</i></p>
     </div>
 </div>
 <div class="response border rounded-3 p-1"  *ngIf="response">

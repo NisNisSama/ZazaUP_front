@@ -13,6 +13,7 @@ import { ChatComponent } from './components/chat/chat.component';
 import { QuestionService } from './services/question.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RecompenseComponent } from './components/recompense/recompense.component';
+import { DecouverteService } from './services/decouverte.service';
 
 
 @NgModule({
@@ -32,6 +33,6 @@ import { RecompenseComponent } from './components/recompense/recompense.componen
     PlaygroundRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [QuestionService]
+  providers: [QuestionService, DecouverteService]
 })
 export class PlaygroundModule { }
