@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DecouverteService } from '../../services/decouverte.service';
 
 @Component({
   selector: 'app-decouverte',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DecouverteComponent implements OnInit {
 
-  constructor() { }
+  fact!: string;
+  constructor(
+    private decouverteService: DecouverteService
+  ) { }
 
   ngOnInit(): void {
+    this.decouverteService.requestDecouverte().subscribe({
+      next: res => this.fact = res.body[0].fact
+    })
+  }
+
+  onClick(){
+    this.decouverteService.requestDecouverte().subscribe({
+      next: res => this.fact = res.body[0].fact
+    })
   }
 
 }

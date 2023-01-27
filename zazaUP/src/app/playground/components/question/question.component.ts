@@ -11,6 +11,8 @@ export class QuestionComponent implements OnInit {
   questionCtrl!: FormControl;
   response!: string;
   loading!: boolean;
+  quote!: string;
+  author!: string;
 
   constructor(
     private questionService: QuestionService,
@@ -20,6 +22,9 @@ export class QuestionComponent implements OnInit {
   ngOnInit(): void {
     this.loading = false;
     this.questionCtrl = this.formBuilder.control('', [Validators.required]);
+    this.questionService.requestQuote().subscribe({
+      next: res => {this.quote = res.body[0].quote; this.author = res.body[0].author}
+    })
   }
 
   onSend(): void {
