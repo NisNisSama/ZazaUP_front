@@ -10,6 +10,8 @@ import { ApprendreComponent } from './components/apprendre/apprendre.component';
 import { QuizzComponent } from './components/quizz/quizz.component';
 import { QuestionComponent } from './components/question/question.component';
 import { ChatComponent } from './components/chat/chat.component';
+import { QuestionService } from './services/question.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { ChatComponent } from './components/chat/chat.component';
   ],
   imports: [
     CommonModule,
-    PlaygroundRoutingModule
-  ]
+    PlaygroundRoutingModule,
+    ReactiveFormsModule
+  ],
+  providers: [QuestionService]
 })
 export class PlaygroundModule { }

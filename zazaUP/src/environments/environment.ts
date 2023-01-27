@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://0.0.0.0:3117'
+  apiUrl: 'http://0.0.0.0:3117',
+  apiopenai: 'https://api.openai.com/v1'
 };
 
 /*

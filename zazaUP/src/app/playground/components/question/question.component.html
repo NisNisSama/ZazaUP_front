@@ -4,11 +4,14 @@
     </div>
     <div class="question-block">
         <h1 class="text-center">Je veux poser une question</h1>
-        <input type="text" name="question" id="question">
-        <button>TROUVER UNE REPONSE</button>
+        <input type="text" [formControl]="questionCtrl" name="question" id="question">
+        <button (click)="onSend()" [disabled]="questionCtrl.invalid" class="position-relative">
+            <span *ngIf="!loading">TROUVER UNE REPONSE</span>
+            <div *ngIf="loading" class="spinner-border loading" role="status"></div>
+        </button>
         <p class="text-center fs-6 opacity-75 my-3">"Inserer une citation"</p>
     </div>
 </div>
-<div class="response">
-    <p></p>
+<div class="response border rounded-3 p-1"  *ngIf="response">
+    <p class="fs-3">{{ response }}</p>
 </div>
