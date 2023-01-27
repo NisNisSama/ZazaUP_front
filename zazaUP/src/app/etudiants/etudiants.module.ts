@@ -11,8 +11,8 @@ import { ExperiencesComponent } from './components/experiences/experiences.compo
 import { FormationsComponent } from './components/formations/formations.component';
 import { DistinctionsComponent } from './components/distinctions/distinctions.component';
 import { ProjetsComponent } from './components/projets/projets.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { HeaderComponent } from './components/header/header.component';
+import { SidenavComponent } from '../playground/components/sidenav/sidenav.component';
+import { HeaderComponent } from '../playground/components/header/header.component';
 
 import { FormationItemComponent } from './components/formation-item/formation-item.component';
 import { CompetenceItemComponent } from './components/competence-item/competence-item.component';

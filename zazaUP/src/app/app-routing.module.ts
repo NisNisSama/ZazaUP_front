@@ -8,8 +8,8 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
-    path: 'etudiants',
-    loadChildren: () => import('./etudiants/etudiants.module').then(m => m.EtudiantsModule),
+    path: 'bienvenue',
+    loadChildren: () => import('./playground/playground.module').then(m => m.PlaygroundModule),
     // canActivate: [AuthGuard]
   },
   {path: '**', redirectTo: 'auth', pathMatch: 'full'}

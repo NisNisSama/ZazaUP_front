@@ -39,7 +39,7 @@ export class SidenavComponent implements OnInit {
   }
 
   private setOtherColor(background: string): void {
-    (this.recherheApp).style.background = background;
+    // (this.recherheApp).style.background = background;
     (this.darkLightApp).style.background = background;
   }
 

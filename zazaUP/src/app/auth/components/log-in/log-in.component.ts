@@ -46,7 +46,7 @@ export class LogInComponent implements OnInit {
 
   onSubmit(): void {
     this.loading = true;
-    this.router.navigateByUrl('/etudiants');
+    this.router.navigateByUrl('/bienvenue');
     /* const donnees: AuthModel = this.logInForm.value as AuthModel;
     this.authService.logIn(donnees).subscribe({
       next: response => {
