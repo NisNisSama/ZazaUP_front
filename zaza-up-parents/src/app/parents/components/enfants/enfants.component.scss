@@ -1,0 +1,64 @@
+#enfants, #add_button {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    animation: .7s linear animationOnInit;
+}
+
+.button_edit {
+    .edit, .delete {
+        transform: scale(1);
+        transition: all .5s ease-in-out;
+    }
+
+    .edit:hover {
+        transform: scale(1.05);
+    }
+
+    .delete:hover {
+        transform: scale(1.05);
+    }
+}
+
+#exampleModalLabel {
+    span:nth-child(1) {
+        color: #ea2b7a;
+    }
+
+    span:nth-child(3) {
+        color: #25c67b;
+    }
+
+    span:nth-child(2) {
+        color: #26a9e1;
+    }
+}
+
+.inscription {
+    .nom {
+        label {
+            color: #ea2b7a;
+        }
+    }
+    .prenoms {
+        label {
+            color: #25c67b;
+        }
+    }
+    .username {
+        label {
+            color: #26a9e1;
+        }
+    }
+}
+
+.enregistrer {
+    background-image: linear-gradient(to right top, #ea2b7a, #f44754, #ee6932, #db890d, #bea500, #97b429, #6bbe51, #25c67b, #00c3a5, #00bdc7, #00b4dc, #26a9e1);
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
+    color: white;
+    border: none;
+    &:hover {
+        transform: scale(1.03);
+        box-shadow: 1px -1px 13px 3px #019fc7af;
+    }
+}
