@@ -1,0 +1,48 @@
+.formulaire {
+    border-radius: 19px;
+    input, select {
+        border-radius: 31px 13px;
+        border: 1px solid #ffffffde;
+        box-shadow: 0px 2px 3px 1px #72727217;
+    }
+
+    label {
+        color: #0092b7e3;
+        opacity: .8;
+        filter: drop-shadow(3px 3px 3px #dfdbdbea);
+        font-weight: bold;
+    }
+
+    .eye_password {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 3%;
+        transform: translate(-31%, 79%);
+        z-index: 10;
+    }
+}
+
+button[type="submit"] {
+    font-size: .85rem;
+    background-color: black !important;
+    letter-spacing: .7px;
+    border: none;
+    color: #fff;
+    letter-spacing: .7px;
+    filter: drop-shadow(3px 3px 3px #c4c0c0ea);
+    transition: transform .3s ease-in-out;
+    background-image: linear-gradient(to right top, #dbe82e, #4dd76f, #00b9a4, #0093b7, #0a6a9d);
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.03);
+}
+
+button[type="button"] {
+    font-size: .85rem;
+}
+
+#signUpModalLabel {
+    color: #0093b7;
+}
