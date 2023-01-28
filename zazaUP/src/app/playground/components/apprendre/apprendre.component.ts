@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApprendreService } from '../../services/apprendre.service';
 
 @Component({
   selector: 'app-apprendre',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./apprendre.component.scss']
 })
 export class ApprendreComponent implements OnInit {
-
-  constructor() { }
+  labelModal!: string;
+  description!: string;
+  constructor(
+    private apprendreService: ApprendreService
+  ) { }
 
   ngOnInit(): void {
+    this.labelModal = "";
+    this.description = "";
+    this.apprendreService.requestDecouverte().subscribe({
+      next: res => console.log(res)
+    });
   }
 
+  onDisplay(data: {label: string, description: string}): void {
+    this.labelModal = data.label;
+    this.description = data.description;
+  }
 }

@@ -8,38 +8,73 @@
     </div>
 </div>
 <div class="Categories">
-    <div class="Categorie">
+    <div class="Categorie"
+        data-bs-toggle="modal" data-bs-target="#exampleModal" 
+        (click)="onDisplay({label: 'Calculs', description: 'Ce cours est conçu pour les calculs mathématiques'})">
         <span class="logo-category"><img src="assets/images/life-cat.gif" alt="cat"></span>
         <h2 class="fw-bold">Calculs</h2>
     </div>
-    <div class="Categorie">
+    <div class="Categorie"
+        data-bs-toggle="modal" data-bs-target="#exampleModal" 
+        (click)="onDisplay({label: 'Physique', description: 'Ce cours est conçu pour l\'étude de la loi de la nature.'})">
         <span class="logo-category"><img src="assets/images/physic.gif" alt="cat"></span>
         <h2 class="fw-bold">Physique</h2>
     </div>
-    <div class="Categorie">
+    <div class="Categorie"
+        data-bs-toggle="modal" data-bs-target="#exampleModal" 
+        (click)="onDisplay({label: 'Chimie', description: 'Ce cours est conçu pour la chimie minérale'})">
         <span class="logo-category"><img src="assets/images/bird-colors.gif" alt="cat"></span>
         <h2 class="fw-bold">Chimie</h2>
     </div>
-    <div class="Categorie">
+    <div class="Categorie"
+        data-bs-toggle="modal" data-bs-target="#exampleModal" 
+        (click)="onDisplay({label: 'Geographie', description: 'Ce cours est conçu pour les connaissances des surfaces physiques de la terre'})">
         <span class="logo-category"><img src="assets/images/spinning-globe.gif" alt="cat"></span>
         <h2 class="fw-bold">Geographie</h2>
     </div>
-    <div class="Categorie">
+    <div class="Categorie"
+        data-bs-toggle="modal" data-bs-target="#exampleModal" 
+        (click)="onDisplay({label: 'SVT', description: 'Ce cours est conçu pour l\'anatomie et la biologie.'})">
         <span class="logo-category"><img src="assets/images/skeleton-dab.gif" alt="cat"></span>
         <h2 class="fw-bold">SVT</h2>
     </div>
-    <div class="Categorie">
+    <div class="Categorie"
+        data-bs-toggle="modal" data-bs-target="#exampleModal" 
+        (click)="onDisplay({label: 'Histoire', description: 'Ce cours est conçu pour apprendre l\'histoire du monde.'})">
         <span class="logo-category"><img src="assets/images/reading-read.gif" alt="cat"></span>
         <h2 class="fw-bold">Histoire</h2>
     </div>
-    <div class="Categorie">
+    <div class="Categorie" 
+        data-bs-toggle="modal" data-bs-target="#exampleModal" 
+        (click)="onDisplay({label: 'Français', description: 'Ce cours est conçu pour les grammaires en français.'})">
         <span class="logo-category"><img src="assets/images/drapeau-france.gif" alt="cat"></span>
         <h2 class="fw-bold">Français</h2>
     </div>
-    <div class="Categorie">
+    <div class="Categorie"
+        data-bs-toggle="modal" data-bs-target="#exampleModal" 
+        (click)="onDisplay({label: 'Anglais', description: 'Ce cours est conçu pour l\'apprentissage de la langue anglaise.'})">
         <span class="logo-category"><img src="assets/images/australia-country.gif" alt="cat"></span>
         <h2 class="fw-bold">Anglais</h2>
     </div>
 </div>
 
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">{{ labelModal }}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          {{ description }}
+        </div>
+      </div>
+    </div>
+</div>
 
