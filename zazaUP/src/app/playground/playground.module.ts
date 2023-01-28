@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RecompenseComponent } from './components/recompense/recompense.component';
 import { DecouverteService } from './services/decouverte.service';
 import { HeaderService } from './services/header.service';
+import { ValinyComponent } from './components/valiny/valiny.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { HeaderService } from './services/header.service';
     QuizzComponent,
     QuestionComponent,
     ChatComponent,
-    RecompenseComponent
+    RecompenseComponent,
+    ValinyComponent
   ],
   imports: [
     CommonModule,

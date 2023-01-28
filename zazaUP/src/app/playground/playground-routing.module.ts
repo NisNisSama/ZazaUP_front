@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { QuestionComponent } from './components/question/question.component';
 import { QuizzComponent } from './components/quizz/quizz.component';
 import { RecompenseComponent } from './components/recompense/recompense.component';
+import { ValinyComponent } from './components/valiny/valiny.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
       {path: 'question', component: QuestionComponent},
       {path: 'chat', component: ChatComponent},
       {path: 'recompense', component: RecompenseComponent},
+      {path: 'valiny', component: ValinyComponent},
       {path: '', redirectTo: 'decouverte', pathMatch: 'prefix'}
     ]
   }
