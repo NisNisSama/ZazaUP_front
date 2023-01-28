@@ -21,6 +21,9 @@
     margin-bottom: 5px;
     padding: 3px;
     border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
     button{
         border: none;
@@ -34,17 +37,17 @@
             background-color: #046983;
         }
     }
+    span{
+        margin-left: 5px;
+    }
 }
 
 .Locked{
-    background-color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.662);
 
-    button{
+    iframe{
+        filter: blur(8px);
         background-color: grey;
-
-        &:hover{
-            background-color: grey;
-            cursor: not-allowed;
-        }
+        cursor: not-allowed;
     }
 }
