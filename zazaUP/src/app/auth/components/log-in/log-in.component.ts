@@ -26,7 +26,7 @@ export class LogInComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.sessionService.isLoggedIn() && this.router.navigateByUrl('/etudiants');
+    this.sessionService.isLoggedIn() && this.router.navigateByUrl('/bienvenue');
     
     this.unauthorized = false;
     this.typeInput = 'password';

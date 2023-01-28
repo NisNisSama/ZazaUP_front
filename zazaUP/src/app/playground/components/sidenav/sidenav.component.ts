@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { SessionService } from 'src/app/core/services/session.service';
 import { lightDark_liste, menu_liste } from './liste_elements';
 
 @Component({
@@ -23,7 +24,9 @@ export class SidenavComponent implements OnInit {
   
   @Output() statusSidebarToEmit = new EventEmitter<{statusSidebar: boolean}>();
 
-  constructor() { }
+  constructor(
+    private sessionService: SessionService
+  ) { }
 
   private setColor(color: string, background: string): void {
     (this.bodyApp).style.color = color;
@@ -151,5 +154,9 @@ export class SidenavComponent implements OnInit {
       }
     }
     this.setColorListActive();
+  }
+
+  onLogout(): void {
+    this.sessionService.logOut();
   }
 }
