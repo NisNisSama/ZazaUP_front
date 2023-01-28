@@ -24,6 +24,7 @@ export class SessionService {
 
     logOut(): void {
         localStorage.removeItem('zazaup_enfants');
+        localStorage.removeItem('zazaup_enfants_id');
         this.router.navigateByUrl('/auth');
     }
 }

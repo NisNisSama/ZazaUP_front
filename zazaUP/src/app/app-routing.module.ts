@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: 'bienvenue',
     loadChildren: () => import('./playground/playground.module').then(m => m.PlaygroundModule),
-    // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   {path: '**', redirectTo: 'auth', pathMatch: 'full'}
 ];

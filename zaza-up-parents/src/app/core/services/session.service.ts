@@ -9,8 +9,9 @@ export class SessionService {
         private router: Router
     ) { }
 
-    setToken(token: string): void {
+    setToken(token: string, token_id: number): void {
         localStorage.setItem('zazaUp_parents', token);
+        // localStorage.setItem('zazaUp_parents')
     }
 
     getToken(): string | null {
@@ -23,6 +24,7 @@ export class SessionService {
 
     logOut(): void {
         localStorage.removeItem('zazaUp_parents');
+
         this.router.navigateByUrl('/auth');
     }
 }
