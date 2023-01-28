@@ -34,7 +34,7 @@ export class SigninComponent implements OnInit {
     this.loading = false;
 
     this.logInForm = this.formBuilder.group({
-      identifiant: [null, Validators.required],
+      username: [null, Validators.required],
       password: [null, Validators.required]
     });
   }
@@ -49,7 +49,7 @@ export class SigninComponent implements OnInit {
     const donnees: AuthModel = this.logInForm.value as AuthModel;
     this.authService.logIn(donnees).subscribe({
       next: response => {
-        this.sessionService.setToken(response.body.access_token);
+        this.sessionService.setToken(response.access, response.id);
         this.router.navigateByUrl('/parents');
         this.loading = false;
       },

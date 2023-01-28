@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecompenseService } from '../../services/recompense.service';
 
 @Component({
   selector: 'app-recompense',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecompenseComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private recompenseService: RecompenseService
+  ) { }
 
   ngOnInit(): void {
+    // this.recompenseService.requestAnimes().subscribe({
+    //   next: res => console.log(res)
+    // });
   }
 
 }

@@ -2,15 +2,18 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
-import { EnfantsModel } from "../models/enfants.model";
 
 @Injectable()
-export class EnfantsService {
+export class AccueilService {
     constructor(
         private http: HttpClient
     ) {}
 
-    getEnfants(): Observable<EnfantsModel[]> {
-        return this.http.get<EnfantsModel[]>(`${environment.apiUrl}/enfants`);
+    getId(): string | null {
+        return localStorage.getItem('zazaUp_parents_id');
+    }
+
+    getInfo(): Observable<any> {
+        return this.http.get(`${environment.apiUrl}/user/${this.getId()}`);
     }
 }

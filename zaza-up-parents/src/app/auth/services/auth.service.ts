@@ -11,10 +11,10 @@ export class AuthService {
     ) {}
 
     logIn(donnees: AuthModel): Observable<any> {
-        return this.http.post(`${environment.apiUrl}/auth`, donnees, {observe: 'body'});
+        return this.http.post(`${environment.apiUrl}/login/`, donnees, {observe: 'body'});
     }
 
     signup(donnees: CreateEtudiantsModel): Observable<any> {
-        return this.http.post(`${environment.apiUrl}/auth/signup`, donnees, {observe: 'body'});
+        return this.http.post(`${environment.apiUrl}/create/parents`, donnees, {observe: 'body'});
     }
 }

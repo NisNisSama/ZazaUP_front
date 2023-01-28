@@ -4,7 +4,7 @@ import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
 
 @Injectable()
-export class ApprendreService {
+export class ValinyService {
     constructor(
         private http: HttpClient
     ) {}
@@ -14,7 +14,7 @@ export class ApprendreService {
     }
 
     requestDecouverte(): Observable<any> {
-        return this.http.get(`${environment.apiUrl}/course/`,
+        return this.http.get(`${environment.apiUrl}/quizz`,
             {
                 headers: {
                     'Authorization': `Bearer ${this.getToken()}`

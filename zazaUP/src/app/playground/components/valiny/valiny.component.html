@@ -1,0 +1,51 @@
+<div class="d-flex justify-content-center">
+    <div class="title-block">
+        <br>
+        <br>
+        <h1 class="text-center">{{questions}}</h1>
+        <br>
+        <br>
+        <div class="reponse">
+            <button *ngFor="let data of valiny" (click)="onVerify(data.is_correct)">{{ data.text }}</button>
+            <br>
+            <button class="bout" (click)="onClick()" routerLink="/bienvenue/valiny">AUTRE QUESTION</button>
+        </div>
+    </div>
+</div>
+<!-- Button trigger modal -->  
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+        <div class="modal-header bg-success">
+            <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Bonne reponse</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Vous avez gagné 100 ZazaPoints !
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Hourra!!!</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalErreur" tabindex="-1" aria-labelledby="exampleModalLabelErreur" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+        <div class="modal-header bg-danger">
+            <h1 class="modal-title fs-5 text-light" id="exampleModalLabelErreur">Mauvaise reponse</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- <div class="modal-body">
+            M
+        </div> -->
+        <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Réessayer!!!</button>
+        </div>
+        </div>
+    </div>
+</div>
+

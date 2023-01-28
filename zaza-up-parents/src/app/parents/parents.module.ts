@@ -8,8 +8,9 @@ import { AccueilComponent } from './components/accueil/accueil.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
-import { enfantsService } from './services/enfants.service';
+import { EnfantsService } from './services/enfants.service';
 import { DiscussionsComponent } from './components/discussions/discussions.component';
+import { AccueilService } from './services/accueil.service';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { DiscussionsComponent } from './components/discussions/discussions.compo
     NgOptimizedImage
   ],
   providers: [
-    enfantsService
+    EnfantsService,
+    AccueilService
   ]
 })
 export class ParentsModule { }

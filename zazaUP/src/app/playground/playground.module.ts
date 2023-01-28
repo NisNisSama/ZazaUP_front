@@ -16,6 +16,9 @@ import { RecompenseComponent } from './components/recompense/recompense.componen
 import { DecouverteService } from './services/decouverte.service';
 import { HeaderService } from './services/header.service';
 import { ApprendreService } from './services/apprendre.service';
+import { ValinyComponent } from './components/valiny/valiny.component';
+import { ValinyService } from './services/valiny.service';
+import { RecompenseService } from './services/recompense.service';
 
 
 @NgModule({
@@ -28,13 +31,21 @@ import { ApprendreService } from './services/apprendre.service';
     QuizzComponent,
     QuestionComponent,
     ChatComponent,
-    RecompenseComponent
+    RecompenseComponent,
+    ValinyComponent
   ],
   imports: [
     CommonModule,
     PlaygroundRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [QuestionService, DecouverteService, HeaderService, ApprendreService]
+  providers: [
+    QuestionService, 
+    DecouverteService, 
+    HeaderService, 
+    ApprendreService, 
+    ValinyService,
+    RecompenseService
+  ]
 })
 export class PlaygroundModule { }

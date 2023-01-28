@@ -11,7 +11,7 @@ export class SessionService {
 
     setToken(token: string, token_id: number): void {
         localStorage.setItem('zazaUp_parents', token);
-        // localStorage.setItem('zazaUp_parents')
+        localStorage.setItem('zazaUp_parents_id', token_id.toString());
     }
 
     getToken(): string | null {

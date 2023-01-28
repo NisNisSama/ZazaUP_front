@@ -4,7 +4,7 @@ import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
 
 @Injectable()
-export class ApprendreService {
+export class RecompenseService {
     constructor(
         private http: HttpClient
     ) {}
@@ -13,8 +13,8 @@ export class ApprendreService {
         return localStorage.getItem('zazaup_enfants');
     }
 
-    requestDecouverte(): Observable<any> {
-        return this.http.get(`${environment.apiUrl}/course/`,
+    requestAnimes(): Observable<any> {
+        return this.http.get(`${environment.apiUrl}/anime/`,
             {
                 headers: {
                     'Authorization': `Bearer ${this.getToken()}`
