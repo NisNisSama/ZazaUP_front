@@ -24,8 +24,8 @@ export class ValinyComponent implements OnInit {
     this.modalErreur = new window.bootstrap.Modal('#exampleModalErreur');
     this.valinyService.requestDecouverte().subscribe({
       next: res => {
-        this.questions = res[0].text;
-        this.valiny = res[0].answers;
+        this.questions = res.text;
+        this.valiny = res.answers;
         console.log(res);
         
       }
@@ -33,13 +33,13 @@ export class ValinyComponent implements OnInit {
   }
 
   onClick(){
-    this.router.navigateByUrl('/bienvenue/valiny');
+    this.router.navigateByUrl('/welcome/valiny');
   }
 
   onVerify(is_correct: boolean): void {
     if(is_correct) {
       this.modalShow.show();
-      this.router.navigateByUrl('/bienvenue/quizz');
+      this.router.navigateByUrl('/welcome/quizz');
     } else {
       this.modalErreur.show();
     }

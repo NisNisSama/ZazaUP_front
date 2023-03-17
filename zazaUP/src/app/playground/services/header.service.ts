@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, of } from "rxjs";
 import { environment } from "src/environments/environment";
 
 @Injectable()
@@ -18,11 +18,6 @@ export class HeaderService {
     }
 
     requestInfo():Observable<any> {
-        return this.http.get(`${environment.apiUrl}/user/${this.getId()}`,
-        { 
-            headers: {
-                'Authorization': `Bearer ${this.getToken()}`
-            }
-        });
+        return of({username: 'Visitor'});
     }
 }

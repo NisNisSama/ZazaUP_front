@@ -28,7 +28,8 @@ export class HeaderComponent implements OnInit {
       if(this.timeLeft > 0) {
         this.timeLeft--;
       } else {
-        this.router.navigateByUrl('/auth');
+        // this.router.navigateByUrl('/auth');
+        alert("Time's up !");
       }
     },1000)
   }

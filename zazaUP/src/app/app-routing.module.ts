@@ -8,11 +8,11 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
-    path: 'bienvenue',
+    path: 'welcome',
     loadChildren: () => import('./playground/playground.module').then(m => m.PlaygroundModule),
-    canActivate: [AuthGuard]
+    //canActivate: [AuthGuard]
   },
-  {path: '**', redirectTo: 'auth', pathMatch: 'full'}
+  {path: '**', redirectTo: 'welcome', pathMatch: 'full'}
 ];
 
 @NgModule({
